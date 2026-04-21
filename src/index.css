@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-display: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: "Courier Prime", "Courier New", Courier, monospace;
+  
+  --color-brand-black: #000000;
+  --color-brand-offwhite: #F5F5F0;
+  --color-brand-darkgray: #1A1A1A;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-black text-brand-offwhite font-sans antialiased;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Sharp edges enforcement */
+  * {
+    border-radius: 0 !important;
+  }
+}
+
+/* Custom noise texture overlay */
+.noise-overlay {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200%;
+  background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+  background-repeat: repeat;
+  opacity: .03;
+  visibility: visible;
+  z-index: 999;
+  pointer-events: none;
+}
+
+.brutalist-border {
+  border: 1px solid var(--color-brand-offwhite);
+}
+
+.label-mono {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-weight: 400;
+}
+
+::selection {
+  background: var(--color-brand-offwhite);
+  color: var(--color-brand-black);
+}
