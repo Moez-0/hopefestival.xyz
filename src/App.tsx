@@ -258,7 +258,7 @@ function Gallery() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className={`relative group grayscale hover:grayscale-0 transition-all duration-1000 bg-brand-darkgray border border-brand-offwhite/10 overflow-hidden ${photo.size}`}
+            className={`relative group transition-all duration-1000 bg-brand-darkgray border border-brand-offwhite/10 overflow-hidden ${photo.size}`}
           >
             <img
               src={photo.src}
