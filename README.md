@@ -1,17 +1,25 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
-
 # HOPE Festival Website
 
-This project contains the HOPE Festival landing page built with React + Vite.
+HOPE Festival landing page built with React + Vite.
 
 ## Run Locally
 
 **Prerequisites:** Node.js
 
-
 1. Install dependencies:
    `npm install`
 2. Run the app:
    `npm run dev`
+
+## Build
+
+1. Create a production build:
+   `npm run build`
+2. Preview locally:
+   `npm run preview`
+
+## Deploy (Netlify)
+
+- Build command: `npm run build`
+- Publish directory: `dist`
+- Routing and headers are configured via `public/_redirects` and `netlify.toml`.
